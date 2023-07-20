@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pardot API POST on Link Click</title>
+</head>
+<body>
+  <a href="#" id="myLink">クリックしてAPIを実行</a>
+
+  <script>
+    // リンクのクリックイベントを監視
+    document.getElementById('myLink').addEventListener('click', function(event) {
+      event.preventDefault(); // リンクのデフォルト動作をキャンセル
+
+      // APIエンドポイントと送信するデータ
+      const apiUrl = 'https://login.salesforce.com/services/oauth2/token';
+      const postData = {
+        grant_type: 'password',
+        client_id: '3MVG9n_HvETGhr3CM073fxc8HgPHjuDXTyfJAm8T87UKf9oXif3Tx43YABkVqa2hUwXkp8OlSzCaGRmGObSI9',
+        client_secret: '9DA0C12607E1265E86F44F26C1B1116E5BFDD85A647E135434855EE21C2F6447',
+        username: 'akira.sato+demoadmin@salesforce.com',
+        password: 'Hinanotokaede1718@',
+        // 他のデータも追加できます
+      };
+
+      // fetch APIを使用してAPIをPOSTで実行
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('APIリクエストが失敗しました。');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // レスポンスの処理
+        console.log('APIレスポンス:', data);
+        // 必要な処理を実行
+      })
+      .catch(error => {
+        console.error('エラー:', error);
+      });
+    });
+  </script>
+</body>
+</html>
