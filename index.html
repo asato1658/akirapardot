@@ -36,7 +36,14 @@
 		<!-- Pardotで確認したFH連携用のコードをコピペ -->
 		<form action="https://go.wakandaforever.tk/l/846683/2022-04-05/cwlpp" method="post">
 			<!-- まずは必須項目だけ連携 -->
-			<label>メールアドレス</label><input type="text" style="width:220px;" name="email"><br><br>
+			<label>メールアドレス</label><input type="text" style="width:220px;" name="email"><br>
+
+			<label>姓</label><input type="text" name="lastname" style="width:100px;" placeholder="姓"><br>
+			<label>名</label><input type="text" name="firstname" style="width:100px;" placeholder="名"><br>
+			<label>コメント</label><input type="textarea" name="comment" style="width:220px;" placeholder="コメント"><br>
+			<label>チェックボックス</label><br><input type="checkbox" name="checkbox0618[]" value="AGILE">AGILE<br>
+			<input type="checkbox" name="checkbox0618[]" value="CARAMELLA">CARAMELLA<br><br>
+			
 			<!-- submitボタン -->
 			<input type="submit" name="送信">
 		</form>
