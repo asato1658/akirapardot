@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<head>
+  <title>bbb ページ</title>
+</head>
+<body>
+  bbb ページ
+
+  
+		<script type='text/javascript'>
+		piAId = '847683';
+		piCId = '3209';
+		piHostname = 'go.wakandaforever.tk';
+
+		(function() {
+			function async_load(){
+			var s = document.createElement('script'); s.type = 'text/javascript';
+			s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+			var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+			}
+			if(window.attachEvent) { window.attachEvent('onload', async_load); }
+			else { window.addEventListener('load', async_load, false); }
+		})();
+		</script>
+
+</body>
+</html>
