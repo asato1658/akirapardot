@@ -34,15 +34,14 @@
     // Create an analytics tracker with the required information:
     // pdt('create', Account Engagement account ID + 1000, Account Engagement campaign ID + 1000, 'go.example.com');
     pdt('create', 847683, 3209, piDomain);
-	
-    <!--  
-    pdt("set", "title", "悪魔くん");
-　　　　　　　　pdt("set", "url", "https://pdt.tsubugumioishii.blog/akumakun ");
-　　　　　　　　pdt("set", "referrer", "https://pdt.tsubugumioishii.blog/mefisto");
-　　　　　　　　pdt("set", "piEmail", "悪魔くんメールアドレス");
-　　　　　　　　pdt("set", "utmCampaign", "メフィスト2世");
-    pdt('sendPageView');
-    -->
+    pdt("setOptIn", true);
+   
+    // pdt("set", "title", "悪魔くん");
+　　　　　　　　// pdt("set", "url", "https://pdt.tsubugumioishii.blog/akumakun ");
+　　　　　　　　// pdt("set", "referrer", "https://pdt.tsubugumioishii.blog/mefisto");
+　　　　　　　　// pdt("set", "piEmail", "悪魔くんメールアドレス");
+　　　　　　　　// pdt("set", "utmCampaign", "メフィスト2世");
+    // pdt('sendPageView');
 	    
     pdt(function (tracker) {
       let status = tracker.getConsentStatus();
