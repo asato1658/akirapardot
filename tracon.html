@@ -34,7 +34,7 @@
     // Create an analytics tracker with the required information:
     // pdt('create', Account Engagement account ID + 1000, Account Engagement campaign ID + 1000, 'go.example.com');
     pdt('create', 847683, 3209, piDomain);
-    pdt("setOptIn", true);
+    pdt('setOptIn', true);
    
     // pdt("set", "title", "悪魔くん");
 　　　　　　　　// pdt("set", "url", "https://pdt.tsubugumioishii.blog/akumakun ");
@@ -43,15 +43,15 @@
 　　　　　　　　// pdt("set", "utmCampaign", "メフィスト2世");
     // pdt('sendPageView');
 	    
-    pdt(function (tracker) {
-      let status = tracker.getConsentStatus();
-      let title = tracker.get("title");
-      let url = tracker.get("url");
-      let referrer = tracker.get("referrer");
-      let piEmail = tracker.get("piEmail");
-      let utmCampaign = tracker.get("utmCampaign");
-      console.log("Status: "+status+, "Title: "+title, "URL: "+url, "Refferer: "+referrer, "piEmail: "+piEmail, "Campaign: "+utmCampaign);
-    });
+    //pdt(function (tracker) {
+      //let status = tracker.getConsentStatus();
+      //let title = tracker.get("title");
+      //let url = tracker.get("url");
+      //let referrer = tracker.get("referrer");
+      //let piEmail = tracker.get("piEmail");
+      //let utmCampaign = tracker.get("utmCampaign");
+     // console.log("Status: "+status+, "Title: "+title, "URL: "+url, "Refferer: "+referrer, "piEmail: "+piEmail, "Campaign: "+utmCampaign);
+    //});
 
 </script>
         
